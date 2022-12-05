@@ -39,7 +39,8 @@ export const parseSideBar = (pathTree: string[]) => {
       } else {
         const nn = createNode();
         nn.text = str当前嵌套;
-        nn.link = str当前路径 + "/";
+        // nn.link = str当前路径 + "/";
+        nn.link = undefined;
         obj.children.push(nn);
       }
     }
@@ -50,6 +51,6 @@ export const parseSideBar = (pathTree: string[]) => {
 
 interface interface节点 {
   text: string;
-  link: string;
+  link?: string;
   children: any[];
 }

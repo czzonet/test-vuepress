@@ -1,4 +1,4 @@
-import { resolve } from "path";
+import { extname, resolve } from "path";
 import { readdirSync, statSync } from "fs";
 
 const str文档根目录 = resolve(__dirname, "../docs");
@@ -19,11 +19,16 @@ export const getFileTree = (p: string, prefix = "", res: string[]) => {
     const element = l[index];
 
     const str相对前缀 = prefix + "/" + element;
-    res.push(str相对前缀);
     const str当前路径 = resolve(p, element);
     if (isDir(str当前路径)) {
+      res.push(str相对前缀);
       getFileTree(str当前路径, str相对前缀, res);
     } else {
+      if (extname(str当前路径) == ".md") {
+        res.push(str相对前缀);
+      } else {
+        // ignore
+      }
       //
     }
   }
