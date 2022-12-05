@@ -5,6 +5,6 @@ export default async (): Promise<Config.InitialOptions> => {
     verbose: true,
     testPathIgnorePatterns: ["/node_modules/", "build"],
     rootDir: "",
-    testEnvironment: "jsdom",
+    // testEnvironment: "jsdom",
   };
 };

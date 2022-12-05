@@ -11,16 +11,18 @@
         }
       }
     ],
-    ["@babel/preset-react"],
+    [
+      "@babel/preset-react"
+    ],
     "@babel/preset-typescript"
   ],
   "plugins": [
-    [
-      "babel-plugin-styled-components",
-      {
-        // "displayName": false,
-        // "fileName": false
-      }
-    ]
+    // [
+    // "babel-plugin-styled-components",
+    // {
+    // "displayName": false,
+    // "fileName": false
+    // }
+    //]
   ]
 }
