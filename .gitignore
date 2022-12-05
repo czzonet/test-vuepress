@@ -26,3 +26,7 @@ TODOs.md
 RELEASE_NOTE*.md
 dist
 temp
+
+# vuepress
+.cache
+.temp
